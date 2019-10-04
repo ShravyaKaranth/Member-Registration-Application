@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberRegistrationFormService", "MemberRegistrationFormService\MemberRegistrationFormService.csproj", "{8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberRegistrationAppln", "MemberRegistrationAppln\MemberRegistrationAppln.csproj", "{100EE74F-AFDB-4486-85EE-94DD9BE3D7B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C} = {8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBA2E87-3EFA-41E4-8EB8-38E2B339CE9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{100EE74F-AFDB-4486-85EE-94DD9BE3D7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100EE74F-AFDB-4486-85EE-94DD9BE3D7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100EE74F-AFDB-4486-85EE-94DD9BE3D7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100EE74F-AFDB-4486-85EE-94DD9BE3D7B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70AF4D1C-2473-4756-8E17-95ACA30F67FC}
+	EndGlobalSection
+EndGlobal
