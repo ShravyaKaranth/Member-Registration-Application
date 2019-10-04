@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "HomePage";
+}
+<html>
+<head>
+    <link href="@Url.Content("~/Content/MainCss.css")"
+          rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form>
+        <div class="text-center">
+            <input class="button button2" type="button" value="Create Applicant" onclick="window.location.href='@Url.Action("HouseholdInfo", "Home")';" />
+            <br />
+            @if (ViewBag.flag == "true")
+            {
+                <br />
+                <input class="button button3" value=" Search Applicant" onclick="window.location.href='@Url.Action("SearchUser", "Home")';" />
+            }
+            <br />
+            <div class="text-right">
+                <input class="button button4" value="Log Out" onclick="window.location.href='@Url.Action("LoginPage", "Home")';" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

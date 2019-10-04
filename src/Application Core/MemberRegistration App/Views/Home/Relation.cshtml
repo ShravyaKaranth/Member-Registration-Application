@@ -1,0 +1,44 @@
+﻿@model MemberRegistrationAppln.Models.HouseholdMember
+@{
+    ViewBag.Title = "Relation";
+}
+
+<h4>Please tell us how the members of your household are related to each other</h4>
+<html>
+<head>
+    <link href="@Url.Content("~/Content/MainCss.css")"
+          rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        foreach (var member in Model.MembersList)
+        {
+            <div class="form-group">
+                <div class="col-md-10">
+                    @member.FirstName
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.RelationshipMembers,new List<SelectListItem>
+                     { new SelectListItem{Text="Father", Value="Father"},
+                new SelectListItem{Text="Mother", Value="Mother"},
+                 new SelectListItem{Text="Daughter", Value="Daughter"},
+                       new SelectListItem{Text="Son", Value="Son"}}, "Please select", new { @id = "dropdown" } )
+                </div>
+            </div>
+            <br />
+        }
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save and Exit" class="button2" /><br /><br />
+                <input value="Back" class="button2" onclick="window.location.href='@Url.Action("HouseholdInfo","Home")';" /><br /><br />
+                <input value="Submit" class="button2" onclick="window.location.href='@Url.Action("HomePage","Home")';" />
+            </div>
+        </div>
+
+    }
+</body>
+</html>

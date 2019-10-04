@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65364/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65364/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65364/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MemberRegistrationFormService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_OneUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Users_InputMessage">
+    <wsdl:part name="parameters" element="tns:Users" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Users_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AuthenticateEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AuthenticateEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmpId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmpId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_members_InputMessage">
+    <wsdl:part name="parameters" element="tns:members" />
+  </wsdl:message>
+  <wsdl:message name="IService1_members_OutputMessage">
+    <wsdl:part name="parameters" element="tns:membersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetApplicationId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetApplicationId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRelation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRelation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddRelation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRelationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEditedApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEditedApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEditedApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEditedApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchApplicantResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="OneUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneUser" message="tns:IService1_OneUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneUserResponse" message="tns:IService1_OneUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Users">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Users" message="tns:IService1_Users_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UsersResponse" message="tns:IService1_Users_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AuthenticateEmployee" message="tns:IService1_AuthenticateEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AuthenticateEmployeeResponse" message="tns:IService1_AuthenticateEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmpId" message="tns:IService1_GetEmpId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmpIdResponse" message="tns:IService1_GetEmpId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddApplicant" message="tns:IService1_AddApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddApplicantResponse" message="tns:IService1_AddApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="members">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/members" message="tns:IService1_members_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/membersResponse" message="tns:IService1_members_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetApplicationId" message="tns:IService1_GetApplicationId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetApplicationIdResponse" message="tns:IService1_GetApplicationId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRelation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddRelation" message="tns:IService1_AddRelation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddRelationResponse" message="tns:IService1_AddRelation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEditedApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddEditedApplicant" message="tns:IService1_AddEditedApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddEditedApplicantResponse" message="tns:IService1_AddEditedApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchApplicant" message="tns:IService1_SearchApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchApplicantResponse" message="tns:IService1_SearchApplicant_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Service1" />
+</wsdl:definitions>
